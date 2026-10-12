@@ -26,10 +26,10 @@
     <!-- 멀티파트 파일 업로드 리졸버 (Servlet 3.0+ StandardServletMultipartResolver) -->
     <beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver" />
 
-    <!-- 3. 개발 환경 CORS 전역 설정 (프론트엔드 localhost:5173 통신 허용) -->
+    <!-- 3. 개발 환경 CORS 전역 설정 (프론트엔드 localhost:5173, 내부 IP 및 ngrok 도메인 허용) -->
     <cors>
         <mapping path="/api/**"
-                 allowed-origins="http://localhost:5173, http://192.168.0.121:5173"
+                 allowed-origin-patterns="http://localhost:*, http://127.0.0.1:*, http://192.168.*:*, https://*.ngrok-free.app, https://*.ngrok-free.dev, https://*.ngrok.io, https://*.trycloudflare.com"
                  allowed-methods="GET, POST, PUT, DELETE, PATCH, OPTIONS"
                  allowed-headers="*"
                  allow-credentials="true"
