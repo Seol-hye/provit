@@ -14,6 +14,10 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
+=======
+import org.springframework.dao.DataAccessException;
+>>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.annotation.Propagation;
@@ -83,8 +87,16 @@ public class DocumentReviewServiceImpl implements DocumentReviewService {
                     reviewDAO.insertDocument(document);
                 }
             });
+<<<<<<< HEAD
         } catch (DuplicateKeyException exception) {
             existing = reviewDAO.selectByRequestId(userNum, requestId);
+=======
+        } catch (DataAccessException exception) {
+            if (!isDuplicateKeyViolation(exception)) throw exception;
+            // NOT_SUPPORTED can still bind a MyBatis session with the first empty
+            // lookup cached. Read after rollback in a fresh transaction/session.
+            existing = transaction.execute(status -> reviewDAO.selectByRequestId(userNum, requestId));
+>>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
             if (existing == null) throw exception;
             return reuseReview(userNum, existing, requestHash);
         }
@@ -110,6 +122,22 @@ public class DocumentReviewServiceImpl implements DocumentReviewService {
         return getReview(userNum, review.getReviewNum());
     }
 
+<<<<<<< HEAD
+=======
+    private boolean isDuplicateKeyViolation(DataAccessException exception) {
+        if (exception instanceof DuplicateKeyException) return true;
+        // SQL-state fallback may wrap ORA-00001 in a generic integrity exception.
+        for (Throwable cause = exception; cause != null; cause = cause.getCause()) {
+            if (cause instanceof java.sql.SQLException sqlException) {
+                for (var sql = sqlException; sql != null; sql = sql.getNextException()) {
+                    if (sql.getErrorCode() == 1) return true;
+                }
+            }
+        }
+        return false;
+    }
+
+>>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
     private void saveResult(int userNum, DocumentReviewDTO review, List<Document> documents, DocumentReviewResultDTO result) {
         if (!"PROCESSING".equals(reviewDAO.lockReview(userNum, review.getReviewNum())))
             throw new IllegalStateException("처리 중인 첨삭 기록이 없습니다.");
