@@ -1,10 +1,7 @@
 html {
   overflow-y: scroll; /* 스크롤바 유무에 따른 레이아웃(가운데 정렬) 틀어짐 방지 */
-<<<<<<< HEAD
-=======
 }
 
 body {
   font-family: Arial, sans-serif;
->>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
 }

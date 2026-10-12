@@ -17,32 +17,21 @@ import java.util.UUID;
 import java.util.regex.Pattern;
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;
 import org.apache.ibatis.mapping.Environment;
-import org.apache.ibatis.session.Configuration;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-<<<<<<< HEAD
-=======
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.ExecutorType;
->>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
 import org.junit.After;
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 import org.mybatis.spring.SqlSessionTemplate;
-<<<<<<< HEAD
-=======
 import org.mybatis.spring.MyBatisExceptionTranslator;
->>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
 import org.mybatis.spring.transaction.SpringManagedTransactionFactory;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.support.EncodedResource;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-<<<<<<< HEAD
-=======
 import org.springframework.jdbc.support.SQLStateSQLExceptionTranslator;
->>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
 import org.springframework.jdbc.datasource.init.ScriptUtils;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.transaction.annotation.AnnotationTransactionAttributeSource;
@@ -72,10 +61,7 @@ public class OracleDocumentReviewPersistenceTest {
     private DocumentReviewService service;
     private DocumentService documents;
     private DataSourceTransactionManager transactionManager;
-<<<<<<< HEAD
-=======
     private SqlSessionFactory sessionFactory;
->>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
     private ResumeDetailDTO resume;
     private byte[] pdf = "%PDF-1.7\nportfolio snapshot".getBytes(StandardCharsets.US_ASCII);
     private boolean documentsDeleted;
@@ -115,12 +101,8 @@ public class OracleDocumentReviewPersistenceTest {
         try (var reader = new java.io.StringReader(xml)) {
             new XMLMapperBuilder(reader, configuration, "review-test-mapper", configuration.getSqlFragments()).parse();
         }
-<<<<<<< HEAD
-        dao = new DocumentReviewDAOImpl(new SqlSessionTemplate(new SqlSessionFactoryBuilder().build(configuration)));
-=======
         sessionFactory = new SqlSessionFactoryBuilder().build(configuration);
         dao = new DocumentReviewDAOImpl(new SqlSessionTemplate(sessionFactory));
->>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
         transactionManager = new DataSourceTransactionManager(dataSource);
         transaction = new TransactionTemplate(transactionManager);
         resume = new ResumeDetailDTO();
@@ -312,8 +294,6 @@ public class OracleDocumentReviewPersistenceTest {
     }
 
     @Test
-<<<<<<< HEAD
-=======
     public void concurrentAuthenticatedRequestsReuseOneOracleRecordAndGenerateOnce() throws Exception {
         assertConcurrentAuthenticatedRequests(dao);
     }
@@ -397,7 +377,6 @@ public class OracleDocumentReviewPersistenceTest {
     }
 
     @Test
->>>>>>> ec89c50f8afa5d0747851a2fe59af77bce750722
     public void requestIdUniquenessPreservesMultipleLegacyRecordsAndReusesSavedResults() throws Exception {
         var request = request(false);
         var first = service.createReview(7, request);
