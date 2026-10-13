@@ -1,164 +1,126 @@
-## 🎬 프로젝트 시연 영상 (Demo)
+# 🚀 Provit (프로빗) | AI 기반 통합 취업 지원 플랫폼
 
-Provit은 AI 모의 면접과 채용정보 탐색, 이력서 첨삭 등 취업 준비에 필요한 기능을 제공하는 통합 취업 지원 플랫폼입니다.
+> Spring MVC와 React 19 기반의 AI 취업 준비 지원 웹 애플리케이션
+
+## 🎬 프로젝트 시연 영상
 
 **▶ [Provit 프로젝트 전체 시연 영상 보러가기](https://youtu.be/cjExe6qPvxE)**
 
-### 주요 시연 기능
-- 메인 페이지 및 공통 네비게이션(GNB)
+---
+
+## 📖 프로젝트 소개
+
+Provit은 취업 준비생들이 하나의 플랫폼에서 면접 연습부터 채용정보 탐색, 이력서 첨삭까지 다양한 취업 준비 활동을 할 수 있도록 개발한 통합 취업 지원 플랫폼입니다.
+
+AI 모의 면접과 면접 평가, 채용공고 검색 및 추천, 이력서 첨삭, MBTI 검사 등의 기능을 제공하여 사용자의 체계적인 취업 준비를 지원하는 것을 목표로 했습니다.
+
+- 📒 [프로젝트 Notion 문서](https://app.notion.com/p/3-provit-bb6ac8c79c4183dda1d2811e561b9fa4)
+
+---
+
+## 🛠 기술 스택
+
+| 구분 | 기술 |
+|---|---|
+| Backend | Java 17, Spring Framework MVC 5.3.39 |
+| Web Server | Apache Tomcat 9 |
+| Database | Oracle Database 19c |
+| Persistence | MyBatis, HikariCP |
+| Frontend | React 19, JavaScript, Vite |
+| Routing | React Router |
+| API Communication | Axios |
+| UI | Bootstrap 5, Lucide Icons |
+| Build Tools | Maven, npm |
+| Collaboration | Git, GitHub, Pull Request, Code Review |
+
+---
+
+## 👩‍💻 담당 역할
+
+### 1. 공통 레이아웃 및 메인 페이지 구현
+
+- 공통 네비게이션 바(GNB) UI 및 기능 구현
+- 서비스 메인 페이지 화면 구성
+- React 기반 공통 컴포넌트 구성
+- 데스크톱 및 모바일 환경을 고려한 반응형 UI 구현
+
+### 2. 회원가입 및 로그인 기능
+
+- 회원가입 및 로그인 페이지 UI 구현
+- Axios를 활용한 백엔드 API 연동
+- 사용자 입력 및 API 응답에 따른 화면 처리
+- 인증 관련 화면의 사용자 흐름 구성
+
+### 3. 마이페이지 구현
+
+- 사용자 정보 조회 및 관리 화면 구현
+- 사용자 활동 내역을 확인할 수 있는 UI 구성
+- 마이페이지 관련 API 연동
+- 사용자 정보 및 활동 데이터의 화면 표시
+
+### 4. MBTI 검사 및 결과 페이지 구현
+
+- React 기반 MBTI 검사 페이지 UI 구현
+- 프론트엔드에서 검사 진행 상태 및 사용자 응답 관리
+- 사용자 응답에 따른 검사 결과 처리 및 결과 페이지 구현
+- 백엔드 API 및 데이터베이스 연동 없이 클라이언트 측에서 검사 기능 구현
+
+---
+
+## ✨ 주요 기능
+
+### 🤖 AI 모의 면접
+- AI 기반 모의 면접 진행
+- 면접 응답에 대한 평가 및 피드백 확인
+
+### 💼 채용정보 탐색
+- 채용공고 검색 및 조회
+- 사용자 취업 준비를 위한 채용정보 추천
+
+### 📝 이력서 첨삭
+- 이력서 첨삭 기능 제공
+- 취업 준비를 위한 피드백 지원
+
+### 🧠 MBTI 검사
+- React 기반 MBTI 검사 진행
+- 프론트엔드에서 사용자 응답 및 검사 상태 관리
+- 검사 완료 후 MBTI 결과 확인
+- 서버에 검사 결과를 저장하지 않는 클라이언트 기반 기능
+
+### 👤 회원 및 마이페이지
 - 회원가입 및 로그인
-- 마이페이지 및 사용자 정보 관리
-- MBTI 검사 및 결과 확인
-- AI 모의 면접 및 면접 평가
-- 채용공고 검색 및 추천
+- 사용자 정보 관리
+- 개인 활동 내역 확인
 
-# 🚀 Provit (프로빗) 팀 프로젝트
-
-> **Spring Framework (MVC) & React 19 기반 풀스택 팀 프로젝트**
+### 📱 반응형 웹 UI
+- 데스크톱 및 모바일 화면 대응
+- 공통 네비게이션을 통한 페이지 이동
 
 ---
 
-## 🛠 기술 스택 (Tech Stack)
+## 🏗 프로젝트 개발 구조
 
-| 구분                | 기술 / 도구            | 상세 버전 및 스펙                             |
-| :------------------ | :--------------------- | :-------------------------------------------- |
-| **Backend**         | Spring Framework (MVC) | **5.3.39** (JDK 17 호환)                      |
-| **WAS**             | Apache Tomcat          | **9.0.x** 권장                                |
-| **Java**            | OpenJDK / Oracle JDK   | **JDK 17**                                    |
-| **Database**        | Oracle Database        | **Oracle 19c** (ojdbc8, MyBatis, HikariCP)    |
-| **Backend IDE**     | Eclipse / STS          | Dynamic Web Module 4.0, Maven                 |
-| **Frontend**        | React 19 + Vite        | JavaScript, Axios, React Router, Lucide Icons |
-| **Frontend IDE**    | Visual Studio Code     | ESLint, Prettier                              |
-| **협업 & 형상관리** | Git / GitHub           | Git-Flow (PR & Code Review 기반)              |
+Provit은 Spring MVC 기반 백엔드와 React 기반 프론트엔드를 분리하여 개발했습니다.
 
----
-
-## 📋 사전 필수 설치 환경
-
-프로젝트를 시작하기 전에 아래 프로그램들이 설치되어 있어야 합니다:
-
-1. **JDK 17** (환경 변수 `JAVA_HOME` 등록 확인)
-2. **Node.js LTS (v20.x 이상 권장)**
-3. **Oracle 19c** (DB 인스턴스 실행 및 계정 생성)
-4. **Eclipse IDE for Enterprise Java and Web Developers** (또는 STS)
-5. **Apache Tomcat 9.0.x**
-6. **Visual Studio Code**
+| 구성 | 역할 |
+|---|---|
+| React | 사용자 화면 및 인터랙션 구현 |
+| Axios | 프론트엔드와 백엔드 간 API 통신 |
+| Spring MVC | API 요청 처리 및 비즈니스 로직 연결 |
+| MyBatis | 데이터베이스 연동 및 SQL 처리 |
+| Oracle Database | 사용자 및 서비스 데이터 관리 |
+| Apache Tomcat | 백엔드 애플리케이션 실행 |
 
 ---
 
-## 💻 초기 로컬 개발 환경 세팅 가이드
+## 💭 프로젝트 회고
 
-### 1. 저장소 Clone 및 브랜치 확인
+Provit 프로젝트를 통해 React와 Spring MVC를 연동하는 풀스택 웹 애플리케이션의 개발 과정을 경험했습니다.
 
-```bash
-git clone <저장소 URL>
-cd provit
-git checkout develop
-```
+회원가입, 로그인, 마이페이지 기능을 구현하면서 프론트엔드 화면과 백엔드 API를 연결하고, 사용자 입력과 서버 응답에 따라 화면을 처리하는 과정을 익힐 수 있었습니다.
 
----
+또한 공통 네비게이션과 메인 페이지를 개발하면서 여러 페이지에서 일관된 사용자 경험을 제공하는 공통 UI 설계의 중요성을 배웠습니다. 데스크톱과 모바일 환경에 대응하는 반응형 화면을 구현하며 다양한 화면 크기를 고려한 UI 개발 경험도 쌓았습니다.
 
-### 2. 백엔드 (Backend - Eclipse) 세팅
+MBTI 검사 및 결과 페이지는 백엔드 API 없이 React 프론트엔드에서 구현했습니다. 검사 진행 과정에서 사용자 응답과 화면 상태를 관리하고, 검사 완료 후 결과를 보여주는 기능을 개발하면서 React의 상태 관리와 조건부 렌더링에 대한 이해를 높일 수 있었습니다.
 
-> ⚠️ **주의**: `.project`, `.classpath`는 Git에 포함되지 않습니다. 반드시 **Maven Project**로 가져와야 라이브러리와 JDK 17이 자동 세팅됩니다.
-
-1. **프로젝트 Import**:
-   - 이클립스 실행 → `File` → `Import...` 클릭
-   - `Maven` → `Existing Maven Projects` 선택 후 `Next`
-   - `Root Directory`에서 `provit/backend` 폴더 선택 후 `Finish`
-2. **DB 및 외부 API 설정 파일 생성 (필독)**:
-   - 최상위에 있는 **`database 및 api properties.txt`** 파일을 열어 내용을 확인합니다.
-   - `backend/src/main/resources/` 위치에 아래 2개 파일을 생성하고 본인의 정보를 입력합니다:
-     - **`database.properties`**: Oracle 19c 계정 및 접속 URL
-     - **`api.properties`**: OpenAI, 채용공고, 운세 등 외부 API 키
-       _(두 파일 모두 `.gitignore`에 등록되어 있어 Git에 올라가지 않으므로 반드시 직접 생성해야 합니다)_
-3. **톰캣 9 서버 연동 및 Context Path 설정 (매우 중요)**:
-   - Eclipse 하단 `Servers` 탭 → `New` → `Server` → `Apache Tomcat v9.0 Server` 추가
-   - 추가한 서버에 `backend` 프로젝트를 Add
-   - 생성된 Tomcat 서버를 더블클릭하여 설정 창 열기:
-     - 좌측 하단 **`Modules`** 탭 클릭
-     - `backend` 모듈 선택 후 `Edit` 클릭
-     - **Path를 `/backend`가 아니라 `/` (슬래시 하나)로 변경** 후 저장 (`Ctrl + S`)
-       _(Path를 `/`로 설정해야 프론트엔드의 `/api` 요청을 정상 수신합니다)_
-4. **서버 시작**:
-   - Tomcat 서버 우클릭 → `Start`
-   - 브라우저에서 `http://localhost:8080/api/health` 접속 시 JSON 응답(`"status": "UP"`)이 나오면 성공!
-
----
-
-### 3. 프론트엔드 (Frontend - VSCode) 세팅
-
-1. **VSCode로 열기**:
-   - VSCode에서 `provit/frontend` 폴더를 엽니다.
-   - 우측 하단에 권장 확장 프로그램(ESLint, Prettier) 알림이 뜨면 **[Install All]**을 클릭합니다.
-2. **패키지 설치**:
-   ```bash
-   cd frontend
-   npm install
-   ```
-3. **개발 서버 실행**:
-
-   ```bash
-   npm run dev
-   ```
-
-   - 브라우저에서 `http://localhost:5173` 접속
-   - 화면 중앙의 **[서버 상태 확인 (/api/health)]** 버튼을 눌러 백엔드와의 통신을 테스트합니다.
-
----
-
-## 🌿 Git 브랜치 전략 및 PR 협업 규칙
-
-본 프로젝트는 **기술팀장의 코드 리뷰 및 승인(Approve)을 거치는 PR(Pull Request) 방식**으로 진행됩니다.
-
-```
-main (최종 배포용)
-  ↑
-develop (통합 개발 브랜치)
-  ↑ (PR & 팀장 승인 후 Merge)
-feature/be-xxx, feature/fe-xxx (개인 작업 브랜치)
-```
-
-### 1. 작업 브랜치 생성 규칙
-
-- 항상 최신 `develop` 브랜치에서 분기합니다:
-  ```bash
-  git checkout develop
-  git pull origin develop
-  git checkout -b feature/be-login     # 백엔드 작업 시
-  git checkout -b feature/fe-login     # 프론트엔드 작업 시
-  ```
-- **브랜치 네이밍 규칙**:
-  - 백엔드 기능: `feature/be-기능명` (예: `feature/be-member-api`)
-  - 프론트엔드 기능: `feature/fe-기능명` (예: `feature/fe-header`)
-  - 버그 수정: `fix/be-기능명`, `fix/fe-기능명`
-
-### 2. 커밋 메시지 컨벤션
-
-```
-feat: 새로운 기능 추가
-fix: 버그 수정
-refactor: 코드 리팩토링 (기능 변경 없음)
-style: 코드 포맷팅, 세미콜론 누락 등
-docs: 문서 수정 (README 등)
-chore: 빌드 업무 수정, 패키지 매니저 수정
-```
-
-_(예: `feat: 회원가입 아이디 중복체크 API 구현`)_
-
-### 3. PR(Pull Request) 생성 및 머지 절차
-
-1. 본인 작업 브랜치로 커밋 후 원격 저장소에 push:
-   ```bash
-   git push origin feature/be-login
-   ```
-2. GitHub 저장소에서 **`develop` 브랜치를 대상(base)으로 PR 생성**
-3. PR 템플릿 양식에 맞춰 작업 내용, 테스트 결과
-4. **기술팀장이 코드 리뷰 후 승인(Approve) 및 Merge 진행**
-5. 머지 완료 후 로컬 `develop` 브랜치 동기화:
-   ```bash
-   git checkout develop
-   git pull origin develop
-   ```
-
-> ⚠️ **절대 `main`이나 `develop` 브랜치에 직접 push하지 마세요!**
+팀원들과 프론트엔드 및 백엔드 기능을 나누어 개발하고, GitHub Pull Request와 코드 리뷰를 통해 기능을 통합하면서 협업 과정에서의 소통과 코드 관리의 중요성을 느꼈습니다.
