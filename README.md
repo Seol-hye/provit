@@ -2,7 +2,7 @@
 
 Provit은 AI 모의 면접과 채용정보 탐색, 이력서 첨삭 등 취업 준비에 필요한 기능을 제공하는 통합 취업 지원 플랫폼입니다.
 
-**▶ [Provit 프로젝트 전체 시연 영상 보러가기]((https://youtu.be/cjExe6qPvxE))**
+**▶ [Provit 프로젝트 전체 시연 영상 보러가기](https://youtu.be/cjExe6qPvxE)**
 
 ### 주요 시연 기능
 - 메인 페이지 및 공통 네비게이션(GNB)
