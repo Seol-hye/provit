@@ -4,7 +4,7 @@
 
 ## 🎬 프로젝트 시연 영상
 
-**▶ [Provit 프로젝트 전체 시연 영상 보러가기](https://youtu.be/cjExe6qPvxE)**
+**▶ [Provit 프로젝트 전체 시연 영상 보러가기](https://youtu.be/CqEBdIDPjlA)**
 
 ---
 
